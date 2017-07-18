@@ -1,0 +1,10 @@
+<h1> Message Board </h1>
+
+<%= form_for @message do |f| %>
+  <%= f.text_field :body %>
+  <%= f.submit "Post Message" %>
+<% end %>
+
+<% @messages.each do |message| %>
+  <h2><%= message.body%></h2>
+<% end %>
