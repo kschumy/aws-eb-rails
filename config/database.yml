@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: aws-eb-rails_production
-  username: aws-eb-rails
-  password: <%= ENV['AWS-EB-RAILS_DATABASE_PASSWORD'] %>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  hostname: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
